@@ -11,7 +11,7 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>com.github.gino0631</groupId>
+        <groupId>com.dua3.icns</groupId>
         <artifactId>icns-maven-plugin</artifactId>
         <configuration>
           <outputFile>generated</outputFile>
