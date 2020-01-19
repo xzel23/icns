@@ -1,8 +1,5 @@
 package com.github.gino0631.icns;
 
-import com.github.gino0631.common.io.InputStreamSupplier;
-import com.github.gino0631.common.io.Writable;
-
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,7 +10,7 @@ import java.util.List;
 /**
  * A representation of ICNS icon data.
  */
-public interface IcnsIcons extends Writable, Closeable {
+public interface IcnsIcons extends Closeable {
     /**
      * ICNS icon entry.
      */

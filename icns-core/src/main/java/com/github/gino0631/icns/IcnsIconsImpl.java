@@ -1,10 +1,8 @@
 package com.github.gino0631.icns;
 
-import com.github.gino0631.common.io.InputStreamSupplier;
-import com.github.gino0631.common.io.IoStreams;
-
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.text.MessageFormat;
 import java.util.ArrayList;
@@ -53,7 +51,7 @@ final class IcnsIconsImpl implements IcnsIcons, IcnsParser {
         public InputStream newInputStream() throws IOException {
             InputStream is = streamSupplier.newInputStream();
             if (offs > 0) {
-                if (IoStreams.skip(is, offs) != offs) {
+                if (is.skip(offs) != offs) {
                     throw new IOException(MessageFormat.format("Stream should contain at least {0} bytes, but it does not", offs + size));
                 }
             }
@@ -112,7 +110,7 @@ final class IcnsIconsImpl implements IcnsIcons, IcnsParser {
     }
 
     static IcnsIcons load(Path file) throws IOException {
-        return load(InputStreamSupplier.of(file));
+        return load(() -> Files.newInputStream(file));
     }
 
     static IcnsIcons load(InputStreamSupplier streamSupplier) throws IOException {
@@ -185,7 +183,7 @@ final class IcnsIconsImpl implements IcnsIcons, IcnsParser {
                 break;
             }
 
-            IoStreams.skip(iconStream, iconSize);
+            iconStream.skip(iconSize);
         }
     }
 

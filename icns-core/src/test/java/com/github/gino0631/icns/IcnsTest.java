@@ -1,6 +1,5 @@
 package com.github.gino0631.icns;
 
-import com.github.gino0631.common.io.IoStreams;
 import org.junit.Test;
 
 import javax.imageio.ImageIO;
