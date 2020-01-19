@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.gino0631</groupId>
+  <groupId>com.dua3.icns</groupId>
   <artifactId>icns-root</artifactId>
-  <version>1.1</version>
+  <version>1.1m</version>
   <packaging>pom</packaging>
 
   <name>ICNS Project Root</name>
@@ -18,8 +18,8 @@
 
   <developers>
     <developer>
-      <id>gino0631</id>
-      <url>https://github.com/gino0631</url>
+      <id>xzel23</id>
+      <url>https://github.com/xzel23</url>
     </developer>
   </developers>
 
@@ -33,20 +33,17 @@
   </modules>
 
   <scm>
-    <connection>scm:git:git://github.com/gino0631/icns.git</connection>
-    <developerConnection>scm:git:git@github.com:gino0631/icns.git</developerConnection>
-    <url>https://github.com/gino0631/icns</url>
-    <tag>icns-root-1.1</tag>
+    <connection>scm:git:git://github.com/xzel23/icns.git</connection>
+    <developerConnection>scm:git:git@github.com:xzel23/icns.git</developerConnection>
+    <url>https://github.com/xzel23/icns</url>
+    <tag>icns-root-1.1m</tag>
   </scm>
   <distributionManagement>
     <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>bintray-dua3-public</id>
+      <name>dua3-public</name>
+      <url>https://api.bintray.com/maven/dua3/public/com.dua3.icns/;publish=1</url>
     </repository>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
   </distributionManagement>
 
   <properties>
@@ -56,7 +53,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.github.gino0631</groupId>
+        <groupId>com.github.xzel23</groupId>
         <artifactId>icns-core</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -85,8 +82,8 @@
           <version>3.6.1</version>
           <configuration>
             <encoding>UTF-8</encoding>
-            <source>1.8</source>
-            <target>1.8</target>
+            <source>11</source>
+            <target>11</target>
           </configuration>
         </plugin>
         <plugin>
