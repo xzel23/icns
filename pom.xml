@@ -3,12 +3,12 @@
 
   <groupId>com.dua3.icns</groupId>
   <artifactId>icns-root</artifactId>
-  <version>1.1m</version>
+  <version>1.1-m</version>
   <packaging>pom</packaging>
 
   <name>ICNS Project Root</name>
   <description>A pure Java implementation of tools for working with Apple Icon Image format icons.</description>
-  <url>https://github.com/gino0631/icns</url>
+  <url>https://github.com/xzel23/icns</url>
   <licenses>
     <license>
       <name>GNU Lesser General Public License</name>
@@ -36,8 +36,8 @@
     <connection>scm:git:git://github.com/xzel23/icns.git</connection>
     <developerConnection>scm:git:git@github.com:xzel23/icns.git</developerConnection>
     <url>https://github.com/xzel23/icns</url>
-    <tag>icns-root-1.1m</tag>
   </scm>
+  
   <distributionManagement>
     <repository>
       <id>bintray-dua3-public</id>
